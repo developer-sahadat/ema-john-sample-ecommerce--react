@@ -17,6 +17,7 @@
 
 .product div {
     padding: 14px;
+    margin-bottom: 10px;
 }
 
 .product h3 {
@@ -41,7 +42,7 @@
 .cart-btn {
     background-color: #FFE0B3;
     width: 100%;
-    padding: 10px 25px;
+    padding: 15px 25px;
     border: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -55,4 +56,8 @@
 
 .cart-btn:hover {
     background-color: #d1953b;
+}
+
+span {
+    padding: 0 10px;
 }
