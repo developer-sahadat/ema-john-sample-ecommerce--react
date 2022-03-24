@@ -1,0 +1,27 @@
+.cart {
+    position: sticky;
+    top: 0;
+}
+
+.cart h2 {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: #1C2B35;
+    text-align: center;
+    padding-bottom: 45px;
+}
+
+.cart p {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 20px;
+    color: #2A414F;
+}
+
+.cart h4 {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    color: #0E161A;
+}
