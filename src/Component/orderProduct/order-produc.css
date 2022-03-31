@@ -1,0 +1,34 @@
+.order-items{
+    display: grid;
+    grid-template-columns: 2fr 9fr 1fr;
+    width: 75%;
+    min-height: 107px;
+    border: 1px solid rgb(157, 152, 152);
+    margin: 1rem auto;
+    justify-content: center;
+    align-items: center;
+    
+}
+.order-items img{
+    width:100px;
+   margin: 5px;
+}
+.order-items h4{
+    margin: 0;
+    padding: 10px 0;
+}
+.order-items h6{
+    margin: 0;
+    padding: 5px 0;
+}
+
+.delete-btn{
+    width: 55px;
+    height: 55px;
+    border: none;
+    background-color: #fab7b7;
+    border-radius: 50px;
+    color: #EB5757;
+    font-size: 20px;
+    cursor: pointer;
+}

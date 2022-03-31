@@ -28,6 +28,7 @@ const addedProducts=()=>{
 }
 
 const removeFromDb = id =>{
+    console.log(id);
     const storedCart = localStorage.getItem('shopping-cart');
     if(storedCart){
         const shoppingCart = JSON.parse(storedCart);
