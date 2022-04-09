@@ -1,27 +1,38 @@
 .cart {
-    position: sticky;
-    top: 0;
+  position: sticky;
+  top: 0;
 }
 
 .cart h2 {
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 30px;
-    color: #1C2B35;
-    text-align: center;
-    padding-bottom: 45px;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 30px;
+  color: #1c2b35;
+  text-align: center;
+  padding-bottom: 45px;
 }
 
 .cart p {
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 20px;
-    color: #2A414F;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #2a414f;
 }
 
 .cart h4 {
-    font-weight: 400;
-    font-size: 21px;
-    line-height: 25px;
-    color: #0E161A;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 25px;
+  color: #0e161a;
+}
+.clearBtn {
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  background-color: #ff3030;
+  font-size: 20px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  cursor: pointer;
 }

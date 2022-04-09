@@ -1,19 +1,30 @@
 .shop-container {
-    display: grid;
-    grid-template-columns: 4fr 1fr;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
 }
 
 .products-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 45px;
-    padding: 30px;
-    align-items: center;
-    justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  padding: 30px;
+  align-items: center;
+  justify-content: center;
 }
 
-
 .cart-container {
-    background: #FFE0B3;
-    padding: 10px;
+  background: #ffe0b3;
+  padding: 10px;
+}
+
+.ReviewOrderBtn {
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  background-color: #ff9900;
+  font-size: 20px;
+  border-radius: 50px;
+  border: none;
+  color: white;
+  cursor: pointer;
 }

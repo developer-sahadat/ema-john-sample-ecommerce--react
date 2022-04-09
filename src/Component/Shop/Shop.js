@@ -5,6 +5,8 @@ import Product from "../Product/Product";
 import useProduct from "../Hook/UseProducts/UseProduct";
 import "./Shop.css";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const Shop = () => {
   const [products] = useProduct();
@@ -57,7 +59,10 @@ const Shop = () => {
       <div className="cart-container">
         <Cart cart={cart}>
           <Link to="/order">
-            <button>Review Order</button>
+            <button className="ReviewOrderBtn">
+              Review Order{" "}
+              <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>{" "}
+            </button>
           </Link>
         </Cart>
       </div>

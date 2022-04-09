@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+.login-container {
+  width: 30%;
+  padding: 20px;
+  margin: 30px auto;
+  font-family: "Lato", sans-serif;
+}
+.login-container h1 {
+  text-align: center;
+  font-weight: 400;
+  font-size: 35px;
+  margin: 0;
+  padding-bottom: 20px;
+  color: #2a414f;
+}
+
+.login {
+  background: #ffffff;
+  border: 1px solid #95a0a7;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 5px 23px -15px #f89705;
+}
+
+.login input {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 45px;
+  border-radius: 5px;
+  padding: 4px;
+  border: 1px solid rgb(161, 161, 161);
+}
+.login p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.0015em;
+  margin: 5px;
+  color: #2a414f;
+}
+
+.login-btn {
+  width: 100%;
+  margin-top: 20px;
+  height: 55px;
+  border: none;
+  font-size: 18px;
+  color: black;
+  background: #ffe0b3;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.orStyle {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.orStyle div {
+  height: 1px;
+  background-color: #95a0a7;
+  width: 100%;
+}
+.orStyle span {
+  color: #95a0a7;
+}
+
+.continue-with-google-btn {
+  width: 100%;
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  background: white;
+  border: 1px solid rgb(161, 161, 161);
+}
+.continue-with-google-btn img {
+  width: 32px;
+  height: 32px;
+}
+.continue-with-google-btn span {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+  color: #2a414f;
+  cursor: pointer;
+}
