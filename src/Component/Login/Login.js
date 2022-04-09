@@ -10,24 +10,20 @@ const Login = () => {
         <div className="login">
           <h1>Login</h1>
           <form>
-            <label for="email">
-              <p> Email</p>
-              <input
-                type="email"
-                required
-                name="email"
-                placeholder="Enter Email"
-              />
-            </label>
-            <label for="password">
-              <p>Password</p>
-              <input
-                required
-                type="password"
-                name="password"
-                placeholder="Enter Password"
-              />
-            </label>
+            <p> Email</p>
+            <input
+              type="email"
+              required
+              name="email"
+              placeholder="Enter Email"
+            />
+            <p>Password</p>
+            <input
+              required
+              type="password"
+              name="password"
+              placeholder="Enter Password"
+            />
             <br></br>
             <button className="login-btn">Login</button>
           </form>
