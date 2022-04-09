@@ -9,7 +9,7 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
-  const [createUserWithEmailAndPassword, user, loading, error] =
+  const [createUserWithEmailAndPassword, user, error] =
     useCreateUserWithEmailAndPassword(auth);
 
   const navigate = useNavigate();
