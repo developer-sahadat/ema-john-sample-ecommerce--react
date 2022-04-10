@@ -12,8 +12,11 @@ const Header = () => {
   return (
     <div className="header">
       <nav className="navbar">
-        <img src={logo} alt="logo" />
         <div>
+          <img src={logo} alt="logo" />
+        </div>
+
+        <div className="navItems">
           <NavLink className="link" to="/">
             Home
           </NavLink>
