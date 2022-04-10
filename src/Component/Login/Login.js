@@ -2,10 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import googleIcon from "../../images/icons8-google-48.png";
-import {
-  useSignInWithEmailAndPassword,
-  useSignInWithGoogle,
-} from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../firebase/init";
 
 const Login = () => {
@@ -19,16 +16,17 @@ const Login = () => {
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
+  let from = location?.state?.from?.pathname || "/";
+  if (user) {
+    navigate(from, { replace: true });
+  }
+
   const handleSignInUser = (event) => {
     event.preventDefault();
     signInWithEmailAndPassword(email, password);
     if (error) {
       setErrorMsg(error.message);
       return;
-    }
-    let from = location?.state?.from?.pathname || "/";
-    if (user) {
-      navigate(from, { replace: true });
     }
   };
 

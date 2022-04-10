@@ -15,7 +15,7 @@ const Inventory = () => {
           <p> Email</p>
           <input
             required
-            value={user.email}
+            value={user?.email}
             readOnly
             type="email"
             name="email"
