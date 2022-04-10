@@ -31,7 +31,7 @@ const Header = () => {
           </NavLink>
           {user ? (
             <button className="longOut" onClick={() => signOut(auth)}>
-              Long Out
+              Sign Out
             </button>
           ) : (
             <NavLink className="link" to="/Login">

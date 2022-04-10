@@ -9,18 +9,10 @@ const Signup = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
-  const [createUserWithEmailAndPassword, user, error] =
+  const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
   const navigate = useNavigate();
-
-  if (error) {
-    setErrorMsg(error.message);
-  }
-
-  if (user) {
-    navigate("/shop");
-  }
 
   const handleCreateUser = (event) => {
     event.preventDefault();
@@ -29,6 +21,14 @@ const Signup = () => {
       return;
     }
     createUserWithEmailAndPassword(email, password);
+    if (error) {
+      setErrorMsg(error.message);
+      return;
+    }
+
+    if (user) {
+      navigate("/shop");
+    }
   };
 
   return (

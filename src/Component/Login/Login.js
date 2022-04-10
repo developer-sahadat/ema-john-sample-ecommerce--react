@@ -2,32 +2,36 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Login.css";
 import googleIcon from "../../images/icons8-google-48.png";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import auth from "../../firebase/init";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
-  const [signInWithEmailAndPassword, user, loading, error] =
-    useSignInWithEmailAndPassword(auth);
-
-  const navigate = useNavigate();
 
   let location = useLocation();
-  let from = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
 
-  if (error) {
-    setErrorMsg(error.message);
-  }
-  if (user) {
-    navigate(from, { replace: true });
-  }
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
 
   const handleSignInUser = (event) => {
     event.preventDefault();
     signInWithEmailAndPassword(email, password);
+    if (error) {
+      setErrorMsg(error.message);
+      return;
+    }
+    let from = location?.state?.from?.pathname || "/";
+    if (user) {
+      navigate(from, { replace: true });
+    }
   };
+
   return (
     <div>
       <div className="login-container">
@@ -40,7 +44,7 @@ const Login = () => {
               required
               name="email"
               placeholder="Enter Email"
-              onBlur={(e) => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
             />
             <p>Password</p>
             <input
@@ -48,7 +52,7 @@ const Login = () => {
               type="password"
               name="password"
               placeholder="Enter Password"
-              onBlur={(e) => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
             />
             <br></br>
             <p style={{ color: "red", padding: "10px" }}>{errorMsg}</p>
