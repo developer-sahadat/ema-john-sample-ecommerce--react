@@ -13,6 +13,9 @@ const Signup = () => {
     useCreateUserWithEmailAndPassword(auth);
 
   const navigate = useNavigate();
+  if (user) {
+    navigate("/shop");
+  }
 
   const handleCreateUser = (event) => {
     event.preventDefault();
@@ -20,14 +23,11 @@ const Signup = () => {
       setErrorMsg("Passwords do not match");
       return;
     }
+
     createUserWithEmailAndPassword(email, password);
     if (error) {
       setErrorMsg(error.message);
       return;
-    }
-
-    if (user) {
-      navigate("/shop");
     }
   };
 
